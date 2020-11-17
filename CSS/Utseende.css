@@ -6,8 +6,8 @@
   text-decoration: none;
 }
 
-* {cursor: url(/Users/anders/Desktop/Nettside/Bilder/Cursor.png), default;}
-*:active {cursor: url(/Users/anders/Desktop/Nettside/Bilder/Cursor2.png), default;}
+* {cursor: url(../Bilder/Cursor.png), default;}
+*:active {cursor: url(../Bilder/Cursor2.png), default;}
 
 body{
   background-color: rgb(40, 40, 40);
