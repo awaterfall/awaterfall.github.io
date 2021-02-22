@@ -24,7 +24,7 @@
           </div>
         </a>
       <div class="dropdown_innhold">
-        <a href="../index.php">Konseptutvikling</a>
+        <a href="../index.html">Konseptutvikling</a>
         <a href="medieproduksjon.php">Medieproduksjon</a>
         <a href="teknologiforstaaelse.php">Teknologiforståelse</a>
         <a href="matematikk.php">Matematikk</a>
