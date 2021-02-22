@@ -1,0 +1,181 @@
+* { /*Alt her sørger for font og at siden fylles med innhold*/
+  box-sizing: border-box;
+  padding: 0; 
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+* {cursor: url(../Bilder/Cursor.png), default;}
+*:active {cursor: url(../Bilder/Cursor2.png), default;}
+
+body{
+  background-color: rgb(40, 40, 40);
+}
+
+.dropbutton::selection{
+  background: none;
+}
+
+/* Gjør at man ikke kan markere ting i en dropdownmeny */
+.dropdown_innhold a::selection{
+  background: none;
+}
+
+/* Gjør at all markert tekst blir en spesiell farge */
+::selection {
+  background: rgb(12, 116, 137);
+  color: rgb(255, 255, 255);
+  text-shadow: none;
+}
+
+/* Gjør at alle paragrafer med klassen "tittel" midtstilles og blir større enn vanlig tekst */
+.tittel {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Gjør at alle paragrafer med klassen "undertittel" blir litt større enn vanlig tekst */
+.undertittel {
+  font-size: 22px;
+}
+
+/*Grids*/
+.grid_container {
+  border-style: solid; /* Lager en hvit ramme rundt nettsiden */
+  border-color: white; /* Gjør at rammen rundt er hvit */
+  border-width: 5px; /* Gjør at rammen blir 5 pixler bred */
+  width: 100vw; /* Gjør at hovedgriden fyller så mye som mulig av siden */
+  height: 100vh; /* Se over */
+  display: grid; /* Gjør at hovedgriden blir behandlet som en grid */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Deler opp I 10 deler */
+  grid-template-rows: 1fr 16fr; /* Endrer høyden på de ulike gridsene */
+}
+
+/* Alt hovedinnhold på siden */
+.innhold {
+  display: grid;
+  font-size: 18px;
+  padding: 4px;
+  color: white;
+  grid-column: 1/11;
+  grid-row: 2/20;
+  overflow: auto;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: left;
+  overflow: auto;
+}
+
+/* Grid som lar meg bestemme hvor på siden jeg vil ha tekst, gjør også at tekst ligger naturlig uten veldig store mellomrom mellom linjene */
+.in{
+  overflow: auto;
+}
+
+.dropdown {
+  display: grid;
+  text-align: center;
+  grid-column: 1/11;
+}
+
+.dropbutton {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border-bottom: solid;
+  border-width: 5px;
+  padding-top: 11px;
+  padding-bottom: 5px;
+  font-size: 42px;
+}
+
+.dropdown_innhold {
+  display: none;
+  font-size: 20px;
+  background-color: white;
+  min-width: 100%;
+}
+
+.dropdown_innhold a {
+  color: black;
+  padding: 7px;
+  text-decoration: none;
+  display: block;
+  border-bottom: solid;
+  border-width: 5px;
+  border-color: white;
+}
+
+.dropdown_innhold a:hover {
+  background-color: rgb(12, 116, 137);
+  color: white;
+}
+
+.dropdown:active .dropdown_innhold {
+  display: block;
+}
+
+.dropdown:hover .dropbutton {
+  background-color: rgb(44,102,110);
+}
+
+.button {
+  background-color: rgb(12, 116, 137);
+  width: fit-content;
+  padding: 6px;
+  border-radius: 3px;
+  border: solid;
+  border-color: white;
+  border-width: 2px;
+  color: white;
+  display: grid;
+  font-size: 17px;
+}
+
+/* Gjør at knapper bytter bakgrunnsfarge når musepekeren er over de */
+.button:hover {
+  background-color: rgb(36, 84, 90);
+  color: rgb(230, 230, 230);
+}
+
+.meny_container {
+  display: inline-block;
+  position: fixed;
+  padding-top: 17px;
+  padding-left: 19px;
+  top: 0px;
+  right: 24px;
+  border-left: solid;
+  border-width: 5px;
+  height: 73px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.meny_aktiv .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.meny_aktiv .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.meny_aktiv .bar2 {
+  opacity: 0;
+  transform: translateX(25px);
+}
+
+/*
+Fargepallett
+rgb(40, 40, 40) 
+rgb(12, 116, 137)
+rgb(7, 57, 60)
+rgb(44, 102, 110) 
+*/
